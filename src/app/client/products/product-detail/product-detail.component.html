@@ -1,0 +1,39 @@
+<body>
+  <app-menu></app-menu>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-3">
+        <app-category></app-category>
+      </div>
+      <div class="col-lg-9">
+        <app-banner></app-banner>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Image</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ product.name }}</td>
+              <td>{{ product.price | currency:'$':true}}</td>
+              <td><img style="width: 300px;" src="{{ product.image }}" alt=""></td>
+              <td>{{ product.desc }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-success btn-xs" routerLink="/">Back To List</button>
+      </div>
+
+    </div>
+
+
+  </div>
+  </body>
+
+  <app-footer></app-footer>
